@@ -7,7 +7,7 @@ import { User } from 'src/interface/all.interface';
 
 @UseGuards(JwtGuard)
 @Controller('user')
-export class UserController {
+export class UserController{
     constructor(
         private userservice: UserService
     ) { }
