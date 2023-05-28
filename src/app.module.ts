@@ -12,6 +12,12 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal:true
     }),
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/nestpracapi'),
+    // MongooseModule.forRootAsync({
+    //   useFactory: (configService: ConfigService) => ({
+    //     uri: configService.get<string>('DB_NAME')
+    //   }),
+    //   inject: [ConfigService]
+    // }),
     AuthModule,
     UserModule,
     BookMarkModule
