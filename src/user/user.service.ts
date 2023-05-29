@@ -15,7 +15,7 @@ export class UserService {
     async updateUser(dto: EditUserDto,user:User) {
         try {
             let newobj = user;
-            newobj = {...newobj,dto}
+            // newobj = {...newobj,dto}
             // const data = await this.userModel.findByIdAndUpdate({_id:user._id},{...user,hash:dto.password},{new:true})
             // console.log(data)
             // return data as User[];
