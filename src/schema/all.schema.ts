@@ -31,9 +31,6 @@ export const UserSchema = new mongoose.Schema({
     lastname:{
         type:String
     },
-    // bookmarks:[{
-        
-    // }]
 })
 
 

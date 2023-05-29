@@ -15,7 +15,8 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
         super({
             jwtFromRequest:
                 ExtractJwt.fromAuthHeaderAsBearerToken(),
-            secretOrKey: `${secret}`
+            // secretOrKey: `${secret}`
+            secretOrKey: `this_is_the_time`
         })
     }
 

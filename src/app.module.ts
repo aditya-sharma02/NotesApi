@@ -11,7 +11,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     ConfigModule.forRoot({
       isGlobal:true
     }),
-    
+    // MongooseModule.forRoot("mongodb://127.0.0.1:27017/nestpracapi")
     MongooseModule.forRootAsync({
       useFactory: (configService: ConfigService) => ({
         uri: configService.get<string>('DB_NAME')
@@ -22,6 +22,5 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     UserModule,
     BookMarkModule
   ],
-  providers: [UserService],
 })
 export class AppModule {}
