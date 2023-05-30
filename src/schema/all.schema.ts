@@ -36,18 +36,18 @@ export const UserSchema = new mongoose.Schema({
 
 export const BookMark = new mongoose.Schema({
     id: {
-        type: Number,
-        require: true,
-        unique: true
+        type: String,
+        unique: true,
+        default:Date.now
     },
     createdate: {
         type: Date,
-        default: new Date().getSeconds(),
+        default:Date.now,
         require:true
     },
     updatedate: {
         type: Date,
-        default: new Date().getSeconds(),
+        default:Date.now,
         require:true
     },
     title:{

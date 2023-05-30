@@ -11,7 +11,10 @@ export class User extends mongoose.Document{
 }
 
 export interface Bookmark extends mongoose.Document{
-    id:Number;
+    id:string;
     createdate:string;
     updatedate:string;
+    title:string;
+    description:string;
+    link:string;
 }
